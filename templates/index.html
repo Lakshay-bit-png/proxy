@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style> body{background-color : rgb(255, 255, 255)} </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Download Images</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='script_image.css') }}">
+</head>
+<body>
+
+    <!-- Upload form -->
+    <form action="{{ url_for('process_form') }}" method="post">
+        <button type="submit">Click here to run the query</button>
+    </form>
+
+    {% if topics %}
+        <div>
+            {% for topic in topics %}
+                <p>{{ topic }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+</body>
+</html>
