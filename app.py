@@ -53,6 +53,6 @@ def process_form():
     
     return render_template('index2.html', topics=topics , mongo_data = mongoData)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=4000, debug=True)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=4000, debug=True)
 
